@@ -192,7 +192,7 @@ video {
 }
 
 footer {
-  background: rgb(201, 78, 33);
+  background: coral;
 }
 
 .fa-instagram {
@@ -224,4 +224,8 @@ footer {
   font-family: "Rubik", sans-serif;
   color: coral;
   text-shadow: 0 0 5px;
+}
+
+.planes {
+  background-color: rgb(29, 28, 28);
 }/*# sourceMappingURL=estilos.css.map */
