@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@500&family=Rubik:ital@1&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@500&family=Rubik:ital@1&display=swap");
 
 .body-h {
   background-color: rgb(29, 28, 28);
@@ -38,7 +39,7 @@
 }
 
 .navbar-w {
-  background-color: rgb(71, 68, 68);
+  background-color:rgb(71, 68, 68);
 }
 
 main {
@@ -97,6 +98,7 @@ main {
     flex: 100%;
   }
 }
+
 .whatsapp-button {
   position: fixed;
   bottom: 20px;
@@ -121,6 +123,25 @@ main {
 }
 
 /*pagina de contactos */
+@mixin button-styles {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: coral;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    transform: scale(1);
+    transition: 0.2s;
+    border: solid 2px black;
+  }
+}
+
 .contactosbody {
   font-family: Arial, sans-serif;
   background-color: rgb(29, 28, 28);
@@ -147,8 +168,8 @@ label {
   font-weight: bold;
 }
 
-input[type=text],
-input[type=email],
+input[type="text"],
+input[type="email"],
 textarea {
   width: 100%;
   padding: 10px;
@@ -158,24 +179,11 @@ textarea {
 }
 
 button.btn-c {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  background-color: coral;
-  color: black;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-button.btn-c:hover {
-  background-color: white;
-  transform: scale(1);
-  transition: 0.2s;
-  border: solid 2px black;
+  @include button-styles;
 }
 
 /* Fin de pagina de contactos  */
+
 .bodyplanes {
   background-color: rgb(29, 28, 28);
 }
@@ -204,7 +212,6 @@ footer {
   font-size: 25px;
   color: white;
 }
-
 .empre {
   margin-top: 20px;
 }
@@ -213,15 +220,25 @@ footer {
   height: 200px;
 }
 
-.subtitulos {
+@mixin subtitulos1 {
   color: azure;
   text-shadow: 0 0 10px black;
   font-family: "Geologica", sans-serif;
   padding: 5px;
 }
 
-.texto {
+@mixin texto1 {
   font-family: "Rubik", sans-serif;
   color: coral;
   text-shadow: 0 0 5px;
-}/*# sourceMappingURL=estilos.css.map */
+}
+
+.subtitulos {
+  @include subtitulos1;
+}
+
+.texto {
+  @include texto1;
+}
+
+
